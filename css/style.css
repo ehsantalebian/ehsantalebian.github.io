@@ -67,7 +67,7 @@ hr.separator {
   color: #fff;
   background-color: transparent;
   outline: none !important;
-  border: 1px solid #00a8e8 !important; /* Forces Cyan Blue Border */
+  border: 1px solid #00a8e8 !important;
 }
 
 .button .button-text {
@@ -217,7 +217,7 @@ hr.separator {
     opacity: 0;
     color: #fff;
     text-transform: uppercase;
-    padding: 0 52px 0 25px; /* Leaves room so text never overlaps icon */
+    padding: 0 52px 0 25px;
     margin: 0;
     white-space: nowrap;
     background-color: #00a8e8;
@@ -234,7 +234,7 @@ hr.separator {
   }
 }
 
-/* [ LANDING HOME PAGE ENVIRONMENT ] */
+/* [ LANDING HOME PAGE ENVIRONMENT - PERFECT VERTICAL CENTERING & RESPONSIVE ] */
 .home-details-container {
   min-height: 100vh;
 }
@@ -247,6 +247,7 @@ hr.separator {
   left: -83%;
   top: -50%;
   background-color: #00a8e8; 
+  z-index: 0;
 }
 
 .home .bg {
@@ -265,14 +266,24 @@ hr.separator {
   z-index: 111;
 }
 
+.home .home-details {
+  z-index: 10;
+}
+
 .home .home-details > div {
-  max-width: 550px;
+  max-width: 560px;
   margin: 0 auto;
 }
 
 @media (min-width: 992px) {
   .home .home-details > div {
-    margin-left: 0;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home .home-details > div {
+    margin-left: 60px;
   }
 }
 
@@ -415,17 +426,21 @@ hr.separator {
 .contact .contactform input[type=text], .contact .contactform input[type=email] { border: 1px solid #111; width: 100%; background: #252525; color: #fff; padding: 11px 26px; margin-bottom: 30px; border-radius: 30px; outline: none !important; }
 .contact .contactform textarea { border: 1px solid #111; background: #252525; color: #fff; width: 100%; padding: 12px 26px; margin-bottom: 20px; height: 160px; border-radius: 30px; outline: none !important; }
 
-/* [ RESPONSIVE DESIGN MOBILE FLUIDITY ] */
+/* [ RESPONSIVE DESIGN MOBILE & TABLET FLUIDITY ] */
 @media (max-width: 991px) {
-  .main-img-mobile { border-radius: 50%; width: 230px; height: 230px; border: 4px solid #252525; margin: 0 auto 25px; display: block; }
+  .home-details-container {
+    padding: 80px 20px 40px;
+    min-height: auto;
+  }
+  .main-img-mobile { border-radius: 50%; width: 200px; height: 200px; border: 4px solid #252525; margin: 0 auto 25px; display: block; object-fit: cover; }
   #menuToggle { display: inline-block; position: fixed; top: 30px; right: 30px; z-index: 1111; padding: 19px 0 0 16px; width: 54px; height: 54px; border-radius: 5px; background: #252525; }
   #menuToggle input { display: flex; width: 54px; height: 54px; position: absolute; cursor: pointer; opacity: 0; z-index: 2; top: 0; left: 0; }
   #menuToggle > span { display: flex; width: 23px; height: 2px; margin-bottom: 5px; position: relative; background: #ffffff; border-radius: 3px; }
   #menu { position: fixed; left: 0; top: 0; width: 100%; height: 100%; padding-top: 60px; background-color: #252525; transform: translate(-100%, 0); transition: transform 0.5s ease; list-style: none; }
   #menuToggle input:checked ~ ul { transform: none; }
   #menu li a { color: #fff; text-transform: uppercase; font-size: 26px; display: block; padding: 14px 0; text-decoration: none; }
-  .home .home-details h1 { font-size: 38px; line-height: 48px; }
-  .home .home-details h1 .hero-subtitle { font-size: 28px; }
+  .home .home-details h1 { font-size: 36px; line-height: 46px; }
+  .home .home-details h1 .hero-subtitle { font-size: 26px; }
 }
 
 @media (max-width: 576px) {
@@ -437,4 +452,5 @@ hr.separator {
   .about .box-stats.with-margin { margin-bottom: 25px; }
   .home .home-details h1 { font-size: 28px; line-height: 36px; }
   .home .home-details h1 .hero-subtitle { font-size: 20px; }
+  .home .home-details p { font-size: 14px; line-height: 26px; }
 }
