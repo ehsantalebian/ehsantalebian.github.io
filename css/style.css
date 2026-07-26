@@ -86,6 +86,7 @@ hr.separator {
   right: 0;
   transform: translateX(100%);
   transition: .3s ease-out all;
+  background-color: #00a8e8;
 }
 
 .button:hover .button-text { color: #ffffff; }
@@ -104,7 +105,7 @@ hr.separator {
   font-size: 19px;
   color: #ffffff;
   border-radius: 50%;
-  background-color: #51b789;
+  background-color: #00a8e8;
 }
 
 /*** Page Title Sections ***/
@@ -137,7 +138,7 @@ hr.separator {
   color: rgba(255, 255, 255, 0.07);
 }
 
-/* [ NAVIGATION MENU PLUMBING - EASY CLICK FIXED ] */
+/* [ NAVIGATION MENU PLUMBING - EASY CLICK & CLEAN READABLE LABELS ] */
 @media (min-width: 992px) {
   .header {
     position: fixed;
@@ -172,19 +173,19 @@ hr.separator {
     color: #ddd;
     font-size: 19px;
     transition: all 0.3s ease;
+    position: absolute;
     left: 0;
     right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0 auto;
-    display: block;
     text-align: center;
-    top: 15px;
-    position: absolute;
     z-index: 3;
-    pointer-events: none; /* All clicks pass straight to the <a> link */
+    pointer-events: none;
   }
 
   .header ul.icon-menu li.icon-box.active {
-    background: #51b789 !important;
+    background: #00a8e8 !important;
   }
 
   .header ul.icon-menu li.icon-box.active i,
@@ -200,34 +201,34 @@ hr.separator {
     width: 100%;
     height: 100%;
     border-radius: 30px;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
     text-decoration: none !important;
   }
 
   .header .icon-box h2 {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     position: absolute;
     top: 0;
     right: 0;
+    height: 50px;
+    line-height: 50px;
     opacity: 0;
     color: #fff;
-    line-height: 50px;
     text-transform: uppercase;
-    padding: 0 25px 0 30px;
-    height: 50px;
-    transition: all 0.3s ease;
+    padding: 0 55px 0 25px; /* Generous right padding prevents text collision with icon */
     margin: 0;
     white-space: nowrap;
-    background-color: #51b789;
+    background-color: #00a8e8;
     border-radius: 30px;
-    pointer-events: none; /* Clicks on label text trigger link */
-    z-index: 1;
+    pointer-events: none;
+    z-index: 2;
+    transition: all 0.3s ease;
   }
 
-  .header .icon-box a:hover h2,
-  .header .icon-box:hover h2 {
+  .header .icon-box:hover h2,
+  .header .icon-box a:hover h2 {
     opacity: 1;
     right: 0;
   }
@@ -241,7 +242,7 @@ hr.separator {
   transform: rotate(-15deg);
   left: -83%;
   top: -50%;
-  background-color: #51b789; 
+  background-color: #00a8e8; 
 }
 
 .home .bg {
@@ -268,7 +269,7 @@ hr.separator {
 }
 
 .home .home-details h1 .hero-subtitle {
-  color: #51b789; 
+  color: #00a8e8; 
   display: block;
   font-size: 38px;
   font-weight: 600;
@@ -277,7 +278,7 @@ hr.separator {
 }
 
 .home .home-details p {
-  border-left: 3px solid #51b789;
+  border-left: 3px solid #00a8e8;
   padding-left: 20px;
   margin: 20px 0 30px;
   font-size: 16px;
@@ -296,7 +297,7 @@ hr.separator {
   text-align: left;
   transition: border-color 0.2s ease;
 }
-.about .about-list li:hover { border-bottom-color: #51b789; }
+.about .about-list li:hover { border-bottom-color: #00a8e8; }
 .about .about-list .title {
   display: block;
   font-family: 'Poppins', sans-serif;
@@ -310,7 +311,7 @@ hr.separator {
 .about .about-list .value a { text-decoration: none; transition: opacity 0.2s ease; }
 .about .about-list .value a:hover { opacity: 0.8; }
 
-/* Box Stats - Grafana Monitor Minimalist Panel Layout */
+/* Box Stats - Minimalist Panel Layout */
 .about .box-stats {
   padding: 14px 20px;
   border-radius: 6px;
@@ -323,7 +324,7 @@ hr.separator {
 .about .box-stats.with-margin { margin-bottom: 20px; }
 .about .box-stats:hover {
   background: #1a1d21;
-  border-bottom-color: #51b789;
+  border-bottom-color: #00a8e8;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
@@ -331,7 +332,7 @@ hr.separator {
   margin: 0 0 2px 0;
   font-size: 32px;
   font-weight: 700;
-  color: #51b789;
+  color: #00a8e8;
   letter-spacing: -0.5px;
   display: block;
 }
@@ -344,15 +345,7 @@ hr.separator {
   line-height: 15px;
 }
 
-/* Linear Skills Dashboard Framework */
-.linear-skill-item { margin-bottom: 22px; }
-.skill-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-.skill-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff; }
-.skill-val { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 12px; color: #51b789; }
-.skill-track { width: 100%; height: 5px; background: rgba(255, 255, 255, 0.06); border-radius: 10px; overflow: hidden; }
-.skill-fill { height: 100%; background-color: #51b789; border-radius: 10px; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); }
-
-/* Custom Badge Skills Dashboard Framework */
+/* Skill Badge Dashboard Framework */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -379,29 +372,29 @@ hr.separator {
 
 .skill-badge:hover {
   transform: translateY(-2px);
-  background-color: #51b789;
+  background-color: #0082b4;
   cursor: default;
 }
 
 /* Custom Contact Links */
 .contact-link-row { margin-bottom: 25px !important; transition: all 0.25s ease; }
-.contact-link-row i { color: #51b789; transition: transform 0.25s ease; }
+.contact-link-row i { color: #00a8e8; transition: transform 0.25s ease; }
 .contact-link-row a { color: #ffffff; text-decoration: none !important; font-weight: 600; font-size: 15px; display: inline-block; transition: color 0.2s ease; }
 .contact-link-row:hover i { transform: scale(1.15); }
-.contact-link-row:hover a { color: #51b789; }
+.contact-link-row:hover a { color: #00a8e8; }
 
-/* Resume Architecture Timelines */
+/* Resume Timelines */
 .about .resume-box ul { margin: 0; padding: 0; list-style: none; }
 .about .resume-box li { position: relative; padding: 0 20px 0 60px; margin: 0 0 50px; }
 .about .resume-box li:after { content: ""; position: absolute; top: 0; left: 20px; bottom: 0; border-left: 1px solid #333; }
-.about .resume-box .icon { width: 40px; height: 40px; position: absolute; left: 0; right: 0; line-height: 40px; text-align: center; z-index: 1; border-radius: 50%; color: #fff; background-color: #51b789; }
+.about .resume-box .icon { width: 40px; height: 40px; position: absolute; left: 0; right: 0; line-height: 40px; text-align: center; z-index: 1; border-radius: 50%; color: #fff; background-color: #00a8e8; }
 .about .resume-box .time { color: #fff; font-size: 12px; padding: 1px 10px; display: inline-block; margin-bottom: 12px; border-radius: 20px; font-weight: 600; background-color: #252525; opacity: .8; }
 .about .resume-box h5 { font-size: 18px; margin: 7px 0 10px; }
 .about .resume-box p { margin: 0; color: #eee; font-size: 14px; }
 .about .resume-box .place { opacity: .8; font-weight: 600; font-size: 15px; position: relative; padding-left: 26px; }
 .about .resume-box .place:before { position: absolute; content: ''; width: 10px; height: 2px; background-color: #fff; left: 7px; top: 9px; opacity: .8; }
 
-/* Contact Forms Baseline Parameters */
+/* Contact Forms */
 .contact .custom-span-contact { font-weight: 600; padding-left: 50px; line-height: 21px; padding-top: 5px; }
 .contact .custom-span-contact i { left: 0; top: 10px; font-size: 33px; position: absolute; }
 .contact .contactform input[type=text], .contact .contactform input[type=email] { border: 1px solid #111; width: 100%; background: #252525; color: #fff; padding: 11px 26px; margin-bottom: 30px; border-radius: 30px; outline: none !important; }

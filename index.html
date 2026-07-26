@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ehsan Talebian - Personal Portfolio</title>
+    <title>Ehsan Talebian - DevOps Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -14,62 +14,21 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/skins/green.css" rel="stylesheet">
+    <link href="css/skins/yellow.css" rel="stylesheet">
 
     <script src="js/modernizr.custom.js"></script>
 
     <style>
-        .home-details-container {
-            min-height: 100vh !important;   
-            display: flex !important;
-            align-items: center !important;  
-        }
-        .home .color-block {
-            background-color: #51b789 !important; 
-        }
-        .home .home-details h1 {
-            font-size: 51px !important;
-            line-height: 62px !important;
-            font-weight: 700 !important;
-            color: #ffffff !important;
-            margin-top: 0 !important;        
-        }
-        .home .home-details h1 span {
-            display: block !important;       
-            color: #51b789 !important;       
-            font-size: 38px !important;
-            font-weight: 600 !important;
-            margin-top: 8px !important;
-            text-transform: uppercase !important;
-        }
-        .home .home-details p {
-            border-left: 3px solid #51b789 !important;
-            max-width: 620px !important; 
-            width: 100% !important;
-            text-align: left !important;
-            margin: 20px 0 30px !important;
-        }
-        .header ul.icon-menu li.icon-box.active,
-        .header ul.icon-menu li.icon-box:hover {
-            background-color: #51b789 !important; 
-        }
-        .header .icon-box h2,
-        .header .icon-box a:hover h2 {
-            background-color: #51b789 !important; 
-            color: #ffffff !important;
-        }
-        .button .button-icon {
-            background-color: #51b789 !important; 
-        }
+        .home .color-block { background-color: #00a8e8 !important; }
+        .home .home-details h1 .hero-subtitle { color: #00a8e8 !important; }
+        .home .home-details p { border-left: 3px solid #00a8e8 !important; }
+        .button:before { background-color: #00a8e8 !important; }
+        .button .button-icon { background-color: #00a8e8 !important; }
+        .header ul.icon-menu li.icon-box.active { background-color: #00a8e8 !important; }
+        .header .icon-box h2, .header .icon-box a:hover h2 { background-color: #00a8e8 !important; color: #ffffff !important; }
         @media (max-width: 991px) {
-            .home-details-container { min-height: auto !important; }
-            .home .home-details p { max-width: 100% !important; }
-            .home .home-details h1 { font-size: 38px !important; line-height: 48px !important; }
-            .home .home-details h1 span { font-size: 26px !important; }
-        }
-        @media (max-width: 576px) {
-            .home .home-details h1 { font-size: 28px !important; line-height: 36px !important; }
-            .home .home-details h1 span { font-size: 20px !important; }
+            #menuToggle { background: #00a8e8 !important; }
+            #menu li.active a { color: #00a8e8 !important; }
         }
     </style>
 </head>
@@ -113,18 +72,17 @@
 
 <section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
     <div class="color-block d-none d-lg-block"></div>
-    <div class="row home-details-container align-items-center m-0">
-        <div class="col-lg-4 bg position-fixed d-none d-lg-block"></div>
+    <div class="row home-details-container align-items-center">
+        <div class="col-lg-4 bg-position d-none d-lg-block">
+            <div class="bg"></div>
+        </div>
         <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
             <div>
-                <img src="img/profile.jpg" class="img-fluid main-img-mobile d-block d-lg-none" alt="Ehsan Talebian" />
-                
-                <h1 class="text-uppercase poppins-font">I'm Ehsan Talebian<span>DevOps Engineer</span></h1>
-                
+                <img src="img/profile.jpg" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="Ehsan Talebian" />
+                <h1 class="text-uppercase poppins-font">I'm Ehsan Talebian<span class="hero-subtitle">DevOps Engineer</span></h1>
                 <p class="open-sans-font">"I am a Tehran-based DevOps Engineer with a strong passion for managing diverse server environments, seamlessly deploying new applications, and ensuring they remain resilient and highly available. Driven by continuous learning, I am always eager to master emerging technologies—firmly believing that iterative progress is far better than chasing static perfection."</p>
-                
-                <a class="button" href="about.html">
-                    <span class="button-text">more about me</span>
+                <a href="about.html" class="button">
+                    <span class="button-text">More About Me</span>
                     <span class="button-icon fa fa-arrow-right"></span>
                 </a>
             </div>

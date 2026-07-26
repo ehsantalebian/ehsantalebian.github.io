@@ -19,21 +19,21 @@
     <script src="js/modernizr.custom.js"></script>
 
     <style>
-        .title-section h1 span { color: #51b789 !important; }
-        .contact-link-row i { color: #51b789 !important; }
-        .contact-link-row:hover a { color: #51b789 !important; }
-        .header ul.icon-menu li.icon-box.active { background-color: #51b789 !important; }
-        .header .icon-box h2, .header .icon-box a:hover h2 { background-color: #51b789 !important; color: #ffffff !important; }
-        .button:before { background-color: #51b789 !important; }
-        .button .button-icon { background-color: #51b789 !important; }
+        .title-section h1 span { color: #00a8e8 !important; }
+        .contact-link-row i { color: #00a8e8 !important; }
+        .contact-link-row:hover a { color: #00a8e8 !important; }
+        .header ul.icon-menu li.icon-box.active { background-color: #00a8e8 !important; }
+        .header .icon-box h2, .header .icon-box a:hover h2 { background-color: #00a8e8 !important; color: #ffffff !important; }
+        .button:before { background-color: #00a8e8 !important; }
+        .button .button-icon { background-color: #00a8e8 !important; }
         .contact .contactform input[type=text]:focus, 
         .contact .contactform input[type=email]:focus, 
         .contact .contactform textarea:focus {
-            border-color: #51b789 !important;
+            border-color: #00a8e8 !important;
         }
         @media (max-width: 991px) {
-            #menuToggle { background: #51b789 !important; }
-            #menu li.active a { color: #51b789 !important; }
+            #menuToggle { background: #00a8e8 !important; }
+            #menu li.active a { color: #00a8e8 !important; }
         }
     </style>
 </head>
@@ -165,7 +165,6 @@
         const submitBtn = document.getElementById('submit-btn');
         const originalBtnHtml = submitBtn.innerHTML;
         
-        // Show loading state
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span class="button-text">Sending...</span><span class="button-icon fa fa-spinner fa-spin"></span>';
 
