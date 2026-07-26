@@ -113,7 +113,7 @@
             </div>
             
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="php/process-form.php">
+                <form class="contactform" id="contact-form">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -129,7 +129,7 @@
                                 <textarea name="message" placeholder="YOUR MESSAGE" required></textarea>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="button">
+                                <button type="submit" class="button" id="submit-btn">
                                     <span class="button-text">Send Message</span>
                                     <span class="button-icon fa fa-send"></span>
                                 </button>
@@ -153,6 +153,64 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
+
+<!-- Telegram Integration Script -->
+<script>
+    // REPLACE THESE TWO VALUES WITH YOUR ACTUAL TELEGRAM CREDENTIALS
+    const TELEGRAM_BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN_HERE';
+    const TELEGRAM_CHAT_ID = 'YOUR_TELEGRAM_CHAT_ID_HERE';
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('submit-btn');
+        const originalBtnHtml = submitBtn.innerHTML;
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="button-text">Sending...</span><span class="button-icon fa fa-spinner fa-spin"></span>';
+
+        const name = this.querySelector('input[name="name"]').value;
+        const email = this.querySelector('input[name="email"]').value;
+        const subject = this.querySelector('input[name="subject"]').value;
+        const message = this.querySelector('textarea[name="message"]').value;
+
+        const text = `📬 *New Contact Form Message*\n\n` +
+                     `👤 *Name:* ${name}\n` +
+                     `📧 *Email:* ${email}\n` +
+                     `📌 *Subject:* ${subject}\n\n` +
+                     `💬 *Message:*\n${message}`;
+
+        fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: text,
+                parse_mode: 'Markdown'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Thank you! Your message has been delivered directly to my Telegram.');
+                this.reset();
+            } else {
+                alert('Failed to send message via Telegram. Please reach out to me directly at ehsant2627@gmail.com.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please check your network connection.');
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHtml;
+        });
+    });
+</script>
 
 </body>
 </html>
