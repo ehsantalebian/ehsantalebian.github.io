@@ -124,7 +124,7 @@
                                 <input type="email" name="email" placeholder="YOUR EMAIL" required>
                             </div>
                             <div class="col-12">
-                                <input type="text" name="subject" placeholder="YOUR SUBJECT" required>
+                                <input type="text" name="subject" placeholder="YOUR SUBJECT (OPTIONAL)">
                             </div>
                             <div class="col-12">
                                 <textarea name="message" placeholder="YOUR MESSAGE" required></textarea>
@@ -171,7 +171,8 @@
 
         const name = this.querySelector('input[name="name"]').value;
         const email = this.querySelector('input[name="email"]').value;
-        const subject = this.querySelector('input[name="subject"]').value;
+        const rawSubject = this.querySelector('input[name="subject"]').value.trim();
+        const subject = rawSubject.length > 0 ? rawSubject : 'General Inquiry';
         const message = this.querySelector('textarea[name="message"]').value;
 
         const text = `📬 *New Contact Form Message*\n\n` +
