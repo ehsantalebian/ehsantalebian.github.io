@@ -137,13 +137,13 @@ hr.separator {
   color: rgba(255, 255, 255, 0.07);
 }
 
-/* [ NAVIGATION MENU PLUMBING ] */
+/* [ NAVIGATION MENU PLUMBING - EASY CLICK FIXED ] */
 @media (min-width: 992px) {
   .header {
     position: fixed;
     right: 30px;
     bottom: 0;
-    z-index: 3;
+    z-index: 100;
     display: flex;
     align-items: center;
     height: calc(100vh - 200px);
@@ -153,7 +153,7 @@ hr.separator {
   }
 
   .header.hide-header { z-index: 0 !important; opacity: 0; }
-  .header ul.icon-menu { margin: 0; padding: 0; }
+  .header ul.icon-menu { margin: 0; padding: 0; list-style: none; }
   
   .header ul.icon-menu li.icon-box {
     width: 50px;
@@ -162,16 +162,16 @@ hr.separator {
     position: relative;
     display: flex;
     align-items: center;
-    transition: .3s;
+    transition: all 0.3s ease;
     margin: 20px 0;
-    border-radius: 50%;
+    border-radius: 30px;
     background: #2b2a2a;
   }
 
   .header ul.icon-menu li.icon-box i {
     color: #ddd;
     font-size: 19px;
-    transition: .3s;
+    transition: all 0.3s ease;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -179,6 +179,8 @@ hr.separator {
     text-align: center;
     top: 15px;
     position: absolute;
+    z-index: 3;
+    pointer-events: none; /* All clicks pass straight to the <a> link */
   }
 
   .header ul.icon-menu li.icon-box.active {
@@ -190,10 +192,22 @@ hr.separator {
     color: #fff;
   }
 
+  .header .icon-box a {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    z-index: 2;
+    cursor: pointer;
+    text-decoration: none !important;
+  }
+
   .header .icon-box h2 {
     font-size: 15px;
     font-weight: 500;
-    z-index: -1;
     position: absolute;
     top: 0;
     right: 0;
@@ -203,16 +217,19 @@ hr.separator {
     text-transform: uppercase;
     padding: 0 25px 0 30px;
     height: 50px;
-    transition: all .3s;
+    transition: all 0.3s ease;
+    margin: 0;
+    white-space: nowrap;
+    background-color: #51b789;
+    border-radius: 30px;
+    pointer-events: none; /* Clicks on label text trigger link */
+    z-index: 1;
   }
 
-  .header .icon-box a { display: block; padding: 0; width: 50px; height: 50px; }
-  .header .icon-box a:hover h2 {
+  .header .icon-box a:hover h2,
+  .header .icon-box:hover h2 {
     opacity: 1;
-    right: 27px;
-    margin: 0;
-    text-align: center;
-    border-radius: 30px 0 0 30px;
+    right: 0;
   }
 }
 
