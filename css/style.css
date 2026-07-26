@@ -521,7 +521,7 @@ hr.separator {
     text-align: center;
   }
 
-  /* CRITICAL FIX: Trigger slide-in on touch/click */
+  /* Slide-in Trigger on Touch/Click */
   #menuToggle input:checked ~ #menu,
   #menuToggle input:checked ~ ul {
     transform: translate(0, 0) !important;
