@@ -67,6 +67,7 @@ hr.separator {
   color: #fff;
   background-color: transparent;
   outline: none !important;
+  border: 1px solid #00a8e8 !important; /* Forces Cyan Blue Border */
 }
 
 .button .button-text {
@@ -86,7 +87,7 @@ hr.separator {
   right: 0;
   transform: translateX(100%);
   transition: .3s ease-out all;
-  background-color: #00a8e8;
+  background-color: #00a8e8 !important;
 }
 
 .button:hover .button-text { color: #ffffff; }
@@ -105,7 +106,7 @@ hr.separator {
   font-size: 19px;
   color: #ffffff;
   border-radius: 50%;
-  background-color: #00a8e8;
+  background-color: #00a8e8 !important;
 }
 
 /*** Page Title Sections ***/
@@ -138,7 +139,7 @@ hr.separator {
   color: rgba(255, 255, 255, 0.07);
 }
 
-/* [ NAVIGATION MENU PLUMBING - EASY CLICK & CLEAN READABLE LABELS ] */
+/* [ NAVIGATION MENU PLUMBING - EASY CLICK & READABLE LABELS ] */
 @media (min-width: 992px) {
   .header {
     position: fixed;
@@ -174,11 +175,10 @@ hr.separator {
     font-size: 19px;
     transition: all 0.3s ease;
     position: absolute;
-    left: 0;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     z-index: 3;
     pointer-events: none;
@@ -217,7 +217,7 @@ hr.separator {
     opacity: 0;
     color: #fff;
     text-transform: uppercase;
-    padding: 0 55px 0 25px; /* Generous right padding prevents text collision with icon */
+    padding: 0 52px 0 25px; /* Leaves room so text never overlaps icon */
     margin: 0;
     white-space: nowrap;
     background-color: #00a8e8;
@@ -235,6 +235,10 @@ hr.separator {
 }
 
 /* [ LANDING HOME PAGE ENVIRONMENT ] */
+.home-details-container {
+  min-height: 100vh;
+}
+
 .home .color-block {
   position: fixed;
   height: 200%;
@@ -259,6 +263,17 @@ hr.separator {
   left: 80px;
   box-shadow: 0 0 15px rgba(0,0,0,.5);
   z-index: 111;
+}
+
+.home .home-details > div {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .home .home-details > div {
+    margin-left: 0;
+  }
 }
 
 .home .home-details h1 {
