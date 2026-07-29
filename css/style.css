@@ -67,7 +67,7 @@ hr.separator {
   color: #fff;
   background-color: transparent;
   outline: none !important;
-  border: 1px solid #00a8e8 !important;
+  border: 1px solid #314A66 !important;
 }
 
 .button .button-text {
@@ -87,7 +87,7 @@ hr.separator {
   right: 0;
   transform: translateX(100%);
   transition: .3s ease-out all;
-  background-color: #00a8e8 !important;
+  background-color: #314A66 !important;
 }
 
 .button:hover .button-text { color: #ffffff; }
@@ -106,7 +106,7 @@ hr.separator {
   font-size: 19px;
   color: #ffffff;
   border-radius: 50%;
-  background-color: #00a8e8 !important;
+  background-color: #314A66 !important;
 }
 
 /*** Page Title Sections ***/
@@ -185,7 +185,7 @@ hr.separator {
   }
 
   .header ul.icon-menu li.icon-box.active {
-    background: #00a8e8 !important;
+    background: #314A66 !important;
   }
 
   .header ul.icon-menu li.icon-box.active i,
@@ -220,7 +220,7 @@ hr.separator {
     padding: 0 52px 0 25px;
     margin: 0;
     white-space: nowrap;
-    background-color: #00a8e8;
+    background-color: #314A66;
     border-radius: 30px;
     pointer-events: none;
     z-index: 2;
@@ -246,7 +246,7 @@ hr.separator {
   transform: rotate(-15deg);
   left: -83%;
   top: -50%;
-  background-color: #00a8e8; 
+  background-color: #314A66; 
   z-index: 0;
 }
 
@@ -295,7 +295,7 @@ hr.separator {
 }
 
 .home .home-details h1 .hero-subtitle {
-  color: #00a8e8; 
+  color: #314A66; 
   display: block;
   font-size: 38px;
   font-weight: 600;
@@ -304,7 +304,7 @@ hr.separator {
 }
 
 .home .home-details p {
-  border-left: 3px solid #00a8e8;
+  border-left: 3px solid #314A66;
   padding-left: 20px;
   margin: 20px 0 30px;
   font-size: 16px;
@@ -323,7 +323,7 @@ hr.separator {
   text-align: left;
   transition: border-color 0.2s ease;
 }
-.about .about-list li:hover { border-bottom-color: #00a8e8; }
+.about .about-list li:hover { border-bottom-color: #314A66; }
 .about .about-list .title {
   display: block;
   font-family: 'Poppins', sans-serif;
@@ -356,7 +356,7 @@ hr.separator {
 .about .box-stats.with-margin { margin-bottom: 20px; }
 .about .box-stats:hover {
   background: #1a1d21;
-  border-bottom-color: #00a8e8;
+  border-bottom-color: #314A66;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
@@ -364,7 +364,7 @@ hr.separator {
   margin: 0 0 2px 0;
   font-size: 32px;
   font-weight: 700;
-  color: #00a8e8;
+  color: #314A66;
   letter-spacing: -0.5px;
   display: block;
 }
@@ -388,7 +388,7 @@ hr.separator {
 }
 
 .skill-badge {
-  background-color: #00a8e8;
+  background-color: #314A66;
   color: #ffffff;
   padding: 8px 16px;
   border-radius: 4px;
@@ -404,22 +404,22 @@ hr.separator {
 
 .skill-badge:hover {
   transform: translateY(-2px);
-  background-color: #0082b4;
+  background-color: #415e7d;
   cursor: default;
 }
 
 /* Custom Contact Links */
 .contact-link-row { margin-bottom: 25px !important; transition: all 0.25s ease; }
-.contact-link-row i { color: #00a8e8; transition: transform 0.25s ease; }
+.contact-link-row i { color: #314A66; transition: transform 0.25s ease; }
 .contact-link-row a { color: #ffffff; text-decoration: none !important; font-weight: 600; font-size: 15px; display: inline-block; transition: color 0.2s ease; word-break: break-word; }
 .contact-link-row:hover i { transform: scale(1.15); }
-.contact-link-row:hover a { color: #00a8e8; }
+.contact-link-row:hover a { color: #314A66; }
 
 /* Resume Timelines */
 .about .resume-box ul { margin: 0; padding: 0; list-style: none; }
 .about .resume-box li { position: relative; padding: 0 20px 0 60px; margin: 0 0 50px; }
 .about .resume-box li:after { content: ""; position: absolute; top: 0; left: 20px; bottom: 0; border-left: 1px solid #333; }
-.about .resume-box .icon { width: 40px; height: 40px; position: absolute; left: 0; right: 0; line-height: 40px; text-align: center; z-index: 1; border-radius: 50%; color: #fff; background-color: #00a8e8; }
+.about .resume-box .icon { width: 40px; height: 40px; position: absolute; left: 0; right: 0; line-height: 40px; text-align: center; z-index: 1; border-radius: 50%; color: #fff; background-color: #314A66; }
 .about .resume-box .time { color: #fff; font-size: 12px; padding: 1px 10px; display: inline-block; margin-bottom: 12px; border-radius: 20px; font-weight: 600; background-color: #252525; opacity: .8; }
 .about .resume-box h5 { font-size: 18px; margin: 7px 0 10px; }
 .about .resume-box p { margin: 0; color: #eee; font-size: 14px; }
@@ -465,7 +465,7 @@ hr.separator {
     width: 50px;
     height: 50px;
     border-radius: 8px;
-    background: #00a8e8 !important;
+    background: #314A66 !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     padding: 0;
   }
@@ -544,12 +544,12 @@ hr.separator {
 
   #menu li a i {
     margin-right: 12px;
-    color: #00a8e8;
+    color: #314A66;
   }
 
   #menu li.active a,
   #menu li a:hover {
-    color: #00a8e8 !important;
+    color: #314A66 !important;
   }
 
   /* Home Details Responsiveness */
@@ -581,7 +581,7 @@ hr.separator {
   .home .home-details p {
     font-size: 14px;
     line-height: 28px;
-    border-left: 3px solid #00a8e8;
+    border-left: 3px solid #314A66;
     padding-left: 15px;
   }
 }
