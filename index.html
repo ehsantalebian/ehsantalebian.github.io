@@ -27,9 +27,25 @@
         .home .home-details p { border-left: 3px solid #00a8e8 !important; }
         .header ul.icon-menu li.icon-box.active { background-color: #00a8e8 !important; }
         .header .icon-box h2, .header .icon-box a:hover h2 { background-color: #00a8e8 !important; color: #ffffff !important; }
+        
+        /* Button Container Alignment & Spacing */
+        .btn-group-home {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
         @media (max-width: 991px) {
             #menuToggle { background: #00a8e8 !important; }
             #menu li.active a { color: #00a8e8 !important; }
+            .btn-group-home {
+                justify-content: center;
+            }
+        }
+        @media (min-width: 992px) {
+            .btn-group-home {
+                justify-content: flex-start;
+            }
         }
     </style>
 </head>
@@ -82,10 +98,16 @@
                 <img src="img/profile.jpg" class="img-fluid main-img-mobile d-block d-lg-none" alt="Ehsan Talebian" />
                 <h1 class="text-uppercase poppins-font">I'm Ehsan Talebian<span class="hero-subtitle">DevOps Engineer</span></h1>
                 <p class="open-sans-font">"I am a Tehran-based DevOps Engineer with a strong passion for managing diverse server environments, seamlessly deploying new applications, and ensuring they remain resilient and highly available. Driven by continuous learning, I am always eager to master emerging technologies—firmly believing that iterative progress is far better than chasing static perfection."</p>
-                <a href="about.html" class="button">
-                    <span class="button-text">More About Me</span>
-                    <span class="button-icon fa fa-arrow-right"></span>
-                </a>
+                <div class="btn-group-home">
+                    <a href="about.html" class="button">
+                        <span class="button-text">More About Me</span>
+                        <span class="button-icon fa fa-arrow-right"></span>
+                    </a>
+                    <a href="Ehsan_Talebian_Resume.pdf" class="button" download>
+                        <span class="button-text">Download CV</span>
+                        <span class="button-icon fa fa-download"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
