@@ -38,6 +38,8 @@
 </head>
 
 <body class="about">
+<script>if (localStorage.getItem('portfolio-theme') === 'light') document.body.classList.add('light-mode');</script>
+
 <button id="theme-toggle" class="theme-toggle-btn" title="Switch Day/Night Mode" aria-label="Toggle Theme">
     <i class="fa fa-sun-o" id="theme-icon"></i>
 </button>
