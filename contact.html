@@ -40,6 +40,10 @@
 </head>
 
 <body class="contact">
+<button id="theme-toggle" class="theme-toggle-btn" title="Switch Day/Night Mode" aria-label="Toggle Theme">
+    <i class="fa fa-sun-o" id="theme-icon"></i>
+</button>
+
 <header class="header" id="navbar-collapse-toggle">
     <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
         <li class="icon-box">
@@ -216,6 +220,33 @@
             submitBtn.innerHTML = originalBtnHtml;
         });
     });
+</script>
+
+<!-- Night & Day Mode Script -->
+<script>
+    (function() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const savedTheme = localStorage.getItem('portfolio-theme');
+
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeIcon.classList.replace('fa-sun-o', 'fa-moon-o');
+        }
+
+        toggleBtn.addEventListener('click', function() {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+
+            if (isLight) {
+                themeIcon.classList.replace('fa-sun-o', 'fa-moon-o');
+                localStorage.setItem('portfolio-theme', 'light');
+            } else {
+                themeIcon.classList.replace('fa-moon-o', 'fa-sun-o');
+                localStorage.setItem('portfolio-theme', 'dark');
+            }
+        });
+    })();
 </script>
 
 </body>

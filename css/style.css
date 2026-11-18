@@ -24,6 +24,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: #111;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .poppins-font { font-family: 'Poppins', sans-serif; }
@@ -595,4 +596,168 @@ hr.separator {
   .home .home-details p { font-size: 13px; line-height: 24px; margin: 15px 0 25px; }
   .button { padding: 14px 60px 14px 28px; font-size: 13px; }
   .button-icon { width: 48px; height: 48px; font-size: 16px; }
+}
+
+/* [ NIGHT & DAY MODE TOGGLE BUTTON ] */
+.theme-toggle-btn {
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2b2a2a;
+  color: #ffffff;
+  border: 1px solid #3990ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+  outline: none !important;
+}
+
+.theme-toggle-btn:hover {
+  background: #3990ff;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+@media (max-width: 991px) {
+  .theme-toggle-btn {
+    top: 20px;
+    right: 80px;
+    border-radius: 8px;
+  }
+}
+
+/* [ DAY MODE (LIGHT THEME) OVERRIDES ] */
+body.light-mode {
+  background-color: #f4f6f9;
+  color: #1e293b;
+}
+
+body.light-mode .theme-toggle-btn {
+  background: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .theme-toggle-btn:hover {
+  background: #3990ff;
+  color: #ffffff;
+}
+
+/* Headings & Primary Text */
+body.light-mode .title-section h1,
+body.light-mode .custom-title,
+body.light-mode .home .home-details h1,
+body.light-mode .about .about-list .value,
+body.light-mode .about .resume-box h5,
+body.light-mode .contact-link-row a {
+  color: #1e293b;
+}
+
+body.light-mode .title-bg {
+  color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .home .home-details p,
+body.light-mode .about .resume-box p,
+body.light-mode .contact p {
+  color: #475569;
+}
+
+/* Action Buttons */
+body.light-mode .button .button-text {
+  color: #1e293b;
+}
+
+body.light-mode .button:hover .button-text {
+  color: #ffffff;
+}
+
+/* Desktop & Mobile Navigation */
+@media (min-width: 992px) {
+  body.light-mode .header ul.icon-menu li.icon-box {
+    background: #e2e8f0;
+  }
+  body.light-mode .header ul.icon-menu li.icon-box i {
+    color: #334155;
+  }
+  body.light-mode .header ul.icon-menu li.icon-box.active i,
+  body.light-mode .header ul.icon-menu li.icon-box:hover i {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 991px) {
+  body.light-mode #menu {
+    background-color: #ffffff;
+  }
+  body.light-mode #menu li a {
+    color: #1e293b;
+  }
+  body.light-mode .main-img-mobile {
+    border-color: #e2e8f0;
+  }
+}
+
+/* About Page Cards & Timeline */
+body.light-mode hr.separator {
+  border-top: 1px solid #cbd5e1;
+}
+
+body.light-mode .about .about-list li {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .about .about-list .title {
+  opacity: 0.75;
+  color: #475569;
+}
+
+body.light-mode .about .box-stats {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .about .box-stats:hover {
+  background: #f8fafc;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .about .box-stats p {
+  color: #64748b;
+}
+
+body.light-mode .about .resume-box li:after {
+  border-left: 1px solid #cbd5e1;
+}
+
+body.light-mode .about .resume-box .time {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+body.light-mode .about .resume-box .place:before {
+  background-color: #334155;
+}
+
+/* Contact Form Inputs */
+body.light-mode .contact .contactform input[type=text],
+body.light-mode .contact .contactform input[type=email],
+body.light-mode .contact .contactform textarea {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+}
+
+body.light-mode .contact .contactform input::placeholder,
+body.light-mode .contact .contactform textarea::placeholder {
+  color: #94a3b8;
 }
