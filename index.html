@@ -28,7 +28,6 @@
         .header ul.icon-menu li.icon-box.active { background-color: #3990ff !important; }
         .header .icon-box h2, .header .icon-box a:hover h2 { background-color: #3990ff !important; color: #ffffff !important; }
         
-        /* Button Container Alignment & Spacing */
         .btn-group-home {
             display: flex;
             flex-wrap: wrap;
@@ -51,6 +50,8 @@
 </head>
 
 <body class="home">
+<script>if (localStorage.getItem('portfolio-theme') === 'light') document.body.classList.add('light-mode');</script>
+
 <button id="theme-toggle" class="theme-toggle-btn" title="Switch Day/Night Mode" aria-label="Toggle Theme">
     <i class="fa fa-sun-o" id="theme-icon"></i>
 </button>
